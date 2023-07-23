@@ -1,0 +1,70 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --page-background-color: #998235;
+  --flowers-background-color: #0b2429;
+}
+
+html {
+  font-family: ;
+  direction: ltr;
+  font-size: 20px;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: var(--page-background-color);
+  color: var(--page-text-color);
+}
+
+figure {
+  display: grid;
+  grid-template-columns: 1fr 2vw 1fr;
+  margin: 0;
+}
+
+.middle {
+  height: 100vh;
+  background-color: var(--flowers-background-color);
+}
+
+.left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.left-flower {
+  width: 30vmin;
+  height: 20vmin;
+  background-color: var(--flowers-background-color);
+  margin: 2vmin 3.5vmin;
+  border-radius: 0 60% 0 60%;
+}
+
+.right {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.right-flower {
+  width: 30vmin;
+  height: 20vmin;
+  background-color: var(--flowers-background-color);
+  margin: 2vmin 3.5vmin;
+  border-radius: 60% 0 60% 0;
+}
+
+/* Fallbacks für manche Styles benutzen, S.13 unten */
+
+/* Füge media queries ein, S.15 unten*/
