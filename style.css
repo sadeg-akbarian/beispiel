@@ -5,8 +5,8 @@
 }
 
 :root {
-  --page-background-color: #998235;
-  --flowers-background-color: #0b2429;
+  --page-background-color: #e3516e;
+  --figures-background-color: #fade8b;
 }
 
 html {
@@ -20,51 +20,46 @@ body {
   height: 100vh;
   background-color: var(--page-background-color);
   color: var(--page-text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 figure {
-  display: grid;
-  grid-template-columns: 1fr 2vw 1fr;
-  margin: 0;
-}
-
-.middle {
-  height: 100vh;
-  background-color: var(--flowers-background-color);
-}
-
-.left {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
+  gap: 0.75rem;
 }
 
-.left-flower {
-  width: 30vmin;
-  height: 20vmin;
-  background-color: var(--flowers-background-color);
-  margin: 2vmin 3.5vmin;
-  border-radius: 0 60% 0 60%;
+.top {
+  border-left: 8rem solid transparent;
+  border-right: 8rem solid transparent;
+  border-bottom: 10rem solid var(--figures-background-color);
 }
 
-.right {
+.buttom::before {
+  content: "";
+  border-left: 8rem solid transparent;
+  border-top: 8rem solid var(--figures-background-color);
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  bottom: -8rem;
+  left: -8rem;
 }
 
-.right-flower {
-  width: 30vmin;
-  height: 20vmin;
-  background-color: var(--flowers-background-color);
-  margin: 2vmin 3.5vmin;
-  border-radius: 60% 0 60% 0;
+.buttom {
+  width: 16rem;
+  height: 8rem;
+  background-color: var(--figures-background-color);
+  position: relative;
 }
 
-/* Fallbacks für manche Styles benutzen, S.13 unten */
-
-/* Füge media queries ein, S.15 unten*/
+.buttom::after {
+  content: "";
+  border-right: 8rem solid transparent;
+  border-top: 8rem solid var(--figures-background-color);
+  position: relative;
+  bottom: -8rem;
+  left: 8rem;
+}
